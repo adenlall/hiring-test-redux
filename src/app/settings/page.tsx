@@ -1,5 +1,6 @@
 "use client"
 
+export const dynamic = "force-dynamic";
 import { deleteIndexedDB } from "@/db/wipeup"
 import toast from "react-hot-toast";
 
