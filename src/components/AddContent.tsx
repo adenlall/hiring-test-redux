@@ -15,20 +15,20 @@ export default function AddContent() {
     const [image, setImage] = useState();
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        try {   
+        try {
             e.preventDefault();
             if (!image) return;
             const uuid = await saveImage({
-                buffer:image
+                buffer: image
             });
             dispatch(setContent({
-                title: e.target.title.value,
-                body: e.target.body.value,
+                title: (e.target as any).title.value,
+                body: (e.target as any).body.value,
                 image: uuid,
-                sensitive: e.target.sensitive.value
+                sensitive: (e.target as any).sensitive.value
             }));
             toast.success("your content list has been updated!");
-        } catch (error:any) {
+        } catch (error: any) {
             toast.error("We can't update your content list!");
             toast.error(error.message);
         }
@@ -37,9 +37,9 @@ export default function AddContent() {
 
     const handleImage = async (e: any) => {
         const image = e.target.files[0];
-        if (image.size >= (MAX_SIZE*1024*1024)) {
+        if (image.size >= (MAX_SIZE * 1024 * 1024)) {
             console.log(image.size, MAX_SIZE);
-            toast.error("you pass the max size "+MAX_SIZE+" Mb");
+            toast.error("you pass the max size " + MAX_SIZE + " Mb");
             return;
         }
         const arrayBuffer = await image.arrayBuffer();
