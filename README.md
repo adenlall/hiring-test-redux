@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hiring Test - Janah Bilal
 
-## Getting Started
 
-First, run the development server:
+## Your Browser should support IndexedDB for complete user experience
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### This is My hiring test
+Create a React or Nextjs application that allows users to upload and manage text content in a
+browser-based database. The application should handle multiple user sessions (Writer and
+Publisher) and synchronize data between tabs in real-time without requiring a page refresh. The
+app must include accessibility features and ensure data security.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<hr />
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+##### Live Url: [Deployment](https://app.vercel.app)
 
-## Learn More
+<hr />
 
-To learn more about Next.js, take a look at the following resources:
+### Overview: 
+In this article, we explore how to synchronize data between different browser tabs in a Next.js application using Redux State Sync. The need for such synchronization arises in dynamic web apps, especially in scenarios like e-commerce where maintaining a consistent state across multiple tabs is crucial.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Run it Locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- clone the repo `git clone https://github.com/adenlall/hiring-test-redux`.
+- install dependencies `pnpm i` or `npm i`.
+- run the local host `pnpm run dev`.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Build Steps:
+ - `pnpm run build`
+ - `pnpm start`
