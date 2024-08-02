@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <>
       <Toaster />
-      <main className="container m-auto w-full p-4 bg-base-300 mt-8 rounded-box">
-        {sessiontype}
+      <main className="container m-auto w-full p-4 bg-base-300 mt-8 mb-4 rounded-box">
         <h2 className="bg-base-200 p-2 w-full rounded-box font-bold text-2xl text-center mb-4">Home Page</h2>
-        <AddContent/>
-        <ManageContent/>
+        {sessiontype === 'writer' ?
+          <AddContent /> : <ManageContent />
+        }
       </main>
     </>
   );

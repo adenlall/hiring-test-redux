@@ -37,9 +37,17 @@ const contentSlice = createSlice({
         }
       };
     },
+    resetContent: (state) => {
+      return {
+        ...state,
+        content: {
+          data:JSON.stringify([])
+        }
+      };
+    },
   },
 });
 
-export const { setContent, deleteContentByIndex } = contentSlice.actions;
+export const { setContent, deleteContentByIndex, resetContent } = contentSlice.actions;
 
 export default contentSlice.reducer;

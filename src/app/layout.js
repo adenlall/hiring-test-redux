@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "@/redux/store-provider";
 import { PersisterProvider } from "@/redux/persistor-provider";
+import NavBar from "@/components/UI/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <StoreProvider>
           <PersisterProvider>
+            <NavBar/>
             {children}
           </PersisterProvider>
         </StoreProvider>

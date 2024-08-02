@@ -23,7 +23,7 @@ import createIdbStorage from "@piotr-cz/redux-persist-idb-storage";
 const persistConfig = {
   key: "root",
   storage: createIdbStorage({
-    name: 'myApp',
+    name: 'janahbilal',
     storeName: 'keyval',
     version: '1'
   }),

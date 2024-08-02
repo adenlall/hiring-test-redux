@@ -5,7 +5,7 @@ import Trash from "./Icons/Trash";
 import { saveImage } from "@/db";
 import { useAppDispatch } from "@/hooks";
 import { setContent } from "@/redux/slices/content.slice";
-// import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const MAX_SIZE = 13 // in Mb
 
@@ -27,10 +27,10 @@ export default function AddContent() {
                 image: uuid,
                 sensitive: (e.target).sensitive.value
             }));
-            // toast.success("your content list has been updated!");
+            toast.success("your content list has been updated!");
         } catch (error) {
-            // toast.error("We can't update your content list!");
-            // toast.error(error.message);
+            toast.error("We can't update your content list!");
+            toast.error(error.message);
         }
     }
 
@@ -39,7 +39,7 @@ export default function AddContent() {
         const image = e.target.files[0];
         if (image.size >= (MAX_SIZE * 1024 * 1024)) {
             console.log(image.size, MAX_SIZE);
-            // toast.error("you pass the max size " + MAX_SIZE + " Mb");
+            toast.error("you pass the max size " + MAX_SIZE + " Mb");
             return;
         }
         const arrayBuffer = await image.arrayBuffer();
