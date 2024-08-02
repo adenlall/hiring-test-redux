@@ -23,10 +23,10 @@ export default function Page() {
 
 const Modal = ({ button, onclick }: {
     button: string,
-    onclick: CallableFunction
+    onclick: any
 }) => (
     <>
-        <button className="btn btn-error" onClick={() => (document?.getElementById('my_modal_2') as HTMLDialogElement).showModal()}>{button}</button>
+        <button aria-describedby="Delete all data" aria-label="Delete" className="btn btn-error" onClick={() => (document?.getElementById('my_modal_2') as HTMLDialogElement)?.showModal()}>{button}</button>
         <dialog id="my_modal_2" className="modal">
             <div className="modal-box">
                 <h3 className="font-bold text-lg">Are you sur!</h3>

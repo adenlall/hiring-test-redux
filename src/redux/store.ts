@@ -14,7 +14,8 @@ import {
   FLUSH,
   PAUSE,
 } from "redux-persist/es/constants";
-import storage from 'redux-persist-indexeddb-storage';
+
+const storage = require('redux-persist-indexeddb-storage');
 
 import sessiontypeSlice from "./slices/sessiontype.slice";
 import contentSlice from "./slices/content.slice";

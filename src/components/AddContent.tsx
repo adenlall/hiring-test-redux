@@ -75,7 +75,7 @@ export default function AddContent() {
                 className="file-input file-input-primary file-input-bordered w-full max-w-xs"
             />
             <div className="label">
-                <span className="label-text-alt">png jpg jpeg types</span>
+                <span aria-hidden={true} className="label-text-alt">png jpg jpeg types</span>
             </div>
         </label>
 
