@@ -12,7 +12,7 @@ app must include accessibility features and ensure data security.
 
 <hr />
 
-##### Live Url: [Deployment](https://app.vercel.app)
+##### Live Url: [Deployment](https://hiring-test-redux.vercel.app/)
 
 <hr />
 
