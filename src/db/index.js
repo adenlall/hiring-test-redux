@@ -1,31 +1,31 @@
-// src/utils/indexedDB.ts
+"use client"
 
 const DB_NAME = 'misc';
 const DB_VERSION = 2; // Ensure this matches your version
 const STORE_NAME = 'files';
 
-const openDB = (): Promise<IDBDatabase> => {
+const openDB = () => {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
 
     request.onupgradeneeded = (event) => {
-      const db = (event.target as IDBOpenDBRequest).result;
+      const db = (event.target).result;
       if (!db.objectStoreNames.contains(STORE_NAME)) {
         db.createObjectStore(STORE_NAME);
       }
     };
 
     request.onsuccess = (event) => {
-      resolve((event.target as IDBOpenDBRequest).result);
+      resolve((event.target).result);
     };
 
     request.onerror = (event) => {
-      reject((event.target as IDBOpenDBRequest).error);
+      reject((event.target).error);
     };
   });
 };
 
-export const saveImage = async (file: any): Promise<string> => {
+export const saveImage = async (file) => {
   const db = await openDB();
   
   return new Promise((resolve, reject) => {
@@ -58,7 +58,7 @@ export const saveImage = async (file: any): Promise<string> => {
   });
 };
 
-export const getImage = async (fileName: string): Promise<Blob | undefined> => {
+export const getImage = async (fileName) => {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const transaction = db.transaction(STORE_NAME, 'readonly');

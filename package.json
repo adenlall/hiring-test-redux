@@ -1,32 +1,29 @@
 {
-  "name": "hiring-test-redux",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.0.1",
-    "next": "13.5.6",
+    "@piotr-cz/redux-persist-idb-storage": "^1.1.3",
+    "@reduxjs/toolkit": "^2.2.7",
+    "daisyui": "^4.12.10",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-hot-toast": "^2.4.1",
-    "react-redux": "^9.1.0",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
-    "redux-persist-indexeddb-storage": "^1.0.4",
     "redux-state-sync": "^3.1.4"
   },
   "devDependencies": {
-    "@types/node": "^20.14.13",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18",
-    "@types/redux-state-sync": "^3.1.9",
-    "autoprefixer": "^10.0.1",
-    "daisyui": "^4.12.10",
+    "@types/react": "18.3.3",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5.5.4"
+    "tailwindcss": "^3.4.1",
+    "typescript": "5.5.4"
   }
 }

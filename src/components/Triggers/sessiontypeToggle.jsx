@@ -10,7 +10,7 @@ const SessionTypeToggle = () => {
   const { sessiontype } = useAppSelector((state) => state.sessiontype);
 
   // handle changes
-  const handleChange = (event:any) => {
+  const handleChange = (event) => {
     dispatch(toggleType(event.target.value));
   };
 

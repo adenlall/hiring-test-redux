@@ -3,14 +3,12 @@
 import { useRef } from 'react'
 import { Provider } from 'react-redux'
 
-import { makeStore, AppStore } from './store'
+import { makeStore } from './store'
 
 export default function StoreProvider({
   children
-}: {
-  children: React.ReactNode | null
 }) {
-  const storeRef = useRef<AppStore>()
+  const storeRef = useRef()
   if (!storeRef.current) {
     storeRef.current = makeStore()
   }

@@ -1,17 +1,9 @@
 "use client";
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getImage } from "@/db";
 import { decodeString } from "@/crypto";
 
-export default function Item({ actions, item }: {
-    actions: ReactNode,
-    item: {
-        image: string,
-        title: string,
-        body: string,
-        sensitive: string
-    }
-}) {
+export default function Item({ actions, item }) {
 
     const [imageSrc, setImageSrc] = useState("");
     const [decrypted, setdDecrypted] = useState(item.sensitive);
@@ -22,7 +14,7 @@ export default function Item({ actions, item }: {
 
     async function getImageBuffer() {
         const result = await getImage(item.image);
-        const blob = new Blob([result as Blob]);
+        const blob = new Blob([result]);
         const url = URL.createObjectURL(blob);
         setImageSrc(url);
     }

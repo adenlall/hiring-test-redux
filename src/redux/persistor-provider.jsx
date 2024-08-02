@@ -6,8 +6,6 @@ import { persistor } from "./store";
 
 export const PersisterProvider = ({
   children,
-}: {
-  children: React.ReactNode;
 }) => {
   return (
     <PersistGate loading={null} persistor={persistor}>

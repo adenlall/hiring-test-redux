@@ -1,6 +1,6 @@
 import * as React from "react"
 
-function Trash(props:any) {
+function Trash(props) {
   return (
     <svg
       viewBox="0 0 24 24"

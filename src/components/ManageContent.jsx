@@ -27,7 +27,7 @@ export default function ManageContent() {
                     </tr>
                 </thead>
                 <tbody>
-                    {JSON.parse(content?.data)?.map((item: any, index: number) => (
+                    {JSON.parse(content?.data)?.map((item, index) => (
                         <Item item={item} key={index}
                             actions={<button onClick={() => dispatch(deleteContentByIndex(index))} className="btn btn-square">
                                 <Trash className="w-8 h-8" />

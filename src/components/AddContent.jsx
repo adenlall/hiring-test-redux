@@ -1,11 +1,11 @@
 "use client"
-import { useState, type FormEvent, ChangeEvent } from "react";
+import { useState, ChangeEvent } from "react";
 import Publish from "./Icons/Publish";
 import Trash from "./Icons/Trash";
 import { saveImage } from "@/db";
 import { useAppDispatch } from "@/hooks";
 import { setContent } from "@/redux/slices/content.slice";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 const MAX_SIZE = 13 // in Mb
 
@@ -14,7 +14,7 @@ export default function AddContent() {
     const dispatch = useAppDispatch();
     const [image, setImage] = useState();
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e) => {
         try {
             e.preventDefault();
             if (!image) return;
@@ -22,24 +22,24 @@ export default function AddContent() {
                 buffer: image
             });
             dispatch(setContent({
-                title: (e.target as any).title.value,
-                body: (e.target as any).body.value,
+                title: (e.target).title.value,
+                body: (e.target).body.value,
                 image: uuid,
-                sensitive: (e.target as any).sensitive.value
+                sensitive: (e.target).sensitive.value
             }));
-            toast.success("your content list has been updated!");
-        } catch (error: any) {
-            toast.error("We can't update your content list!");
-            toast.error(error.message);
+            // toast.success("your content list has been updated!");
+        } catch (error) {
+            // toast.error("We can't update your content list!");
+            // toast.error(error.message);
         }
     }
 
 
-    const handleImage = async (e: any) => {
+    const handleImage = async (e) => {
         const image = e.target.files[0];
         if (image.size >= (MAX_SIZE * 1024 * 1024)) {
             console.log(image.size, MAX_SIZE);
-            toast.error("you pass the max size " + MAX_SIZE + " Mb");
+            // toast.error("you pass the max size " + MAX_SIZE + " Mb");
             return;
         }
         const arrayBuffer = await image.arrayBuffer();
