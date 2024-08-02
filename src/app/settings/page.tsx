@@ -26,7 +26,7 @@ const Modal = ({ button, onclick }: {
     onclick: CallableFunction
 }) => (
     <>
-        <button className="btn btn-error" onClick={() => document?.getElementById('my_modal_2')?.showModal() as any}>{button}</button>
+        <button className="btn btn-error" onClick={() => (document?.getElementById('my_modal_2') as HTMLDialogElement).showModal()}>{button}</button>
         <dialog id="my_modal_2" className="modal">
             <div className="modal-box">
                 <h3 className="font-bold text-lg">Are you sur!</h3>
