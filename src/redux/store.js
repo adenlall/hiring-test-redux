@@ -4,8 +4,8 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import {
   createStateSyncMiddleware,
   initMessageListener,
-} from "redux-state-sync";
-import { persistStore, persistReducer } from "redux-persist";
+} from "redux-state-sync"; // synchronize the state across multiple browser tabs with the Broadcasting API
+import { persistStore, persistReducer } from "redux-persist"; // allow storing and reload it when the app starts
 import {
   PERSIST,
   PURGE,

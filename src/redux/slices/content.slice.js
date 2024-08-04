@@ -13,7 +13,6 @@ const contentSlice = createSlice({
   reducers: {
     setContent: (state, actions) => {
       const tempArr = JSON.parse(state.content.data);
-      console.log(hashString(actions.payload.sensitive), hashString(actions.payload.sensitive), actions.payload.sensitive);
       tempArr.push({
         title: actions.payload.title,
         body: actions.payload.body,
