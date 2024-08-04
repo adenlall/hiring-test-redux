@@ -18,7 +18,7 @@ import {
 import sessiontypeSlice from "./slices/sessiontype.slice";
 import contentSlice from "./slices/content.slice";
 
-import createIdbStorage from "@piotr-cz/redux-persist-idb-storage";
+import createIdbStorage from "@piotr-cz/redux-persist-idb-storage"; // redux-persist : store the state into INDEXEDDB
 
 const persistConfig = {
   key: "root",
