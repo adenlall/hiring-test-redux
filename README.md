@@ -10,6 +10,10 @@ browser-based database. The application should handle multiple user sessions (Wr
 Publisher) and synchronize data between tabs in real-time without requiring a page refresh. The
 app must include accessibility features and ensure data security.
 
+<video width="100%" height="340" controls>
+  <source src="./public/hiring-test.webm" type="video/mp4">
+</video>
+
 <hr />
 
 ##### Live Url: [Deployment](https://hiring-test-redux.vercel.app/)
