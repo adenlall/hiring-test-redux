@@ -11,7 +11,7 @@ Publisher) and synchronize data between tabs in real-time without requiring a pa
 app must include accessibility features and ensure data security.
 
 <video width="100%" height="340" controls>
-  <source src="./public/hiring-test.webm" type="video/mp4">
+  <source src="https://github.com/adenlall/hiring-test-redux/blob/main/public/hiring-test.webm" type="video/webm">
 </video>
 
 <hr />
