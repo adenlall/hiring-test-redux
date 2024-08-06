@@ -1,7 +1,7 @@
 "use client"
 
 const DB_NAME = 'misc';
-const DB_VERSION = 2; // Ensure this matches your version
+const DB_VERSION = 2;
 const STORE_NAME = 'files';
 
 const openDB = () => {
